@@ -2,11 +2,42 @@ const path = require('path');
 const express = require('express');
 var request = require("request");
 const { parse } = require('path');
+const cors = require('cors');
+const mongoose = require('mongoose')
+const bodyParser = require('body-parser');
+
+// connect to DB
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb+srv://dbSebastian:Cancer19%2B@cluster0.1x6ms.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+{ useNewUrlParser: true, useUnifiedTopology: true},
+()=> console.log("connected to DB!"))
 
 const app = express();
 const PORT = 5000;
 
-app.get("/", (req,res) => res.send("hello world!"));
+
+//Import Routes
+const apiRouter = require('./routes/api')
+const otherRouter = require('./routes/other')
+
+app.use(cors());
+app.use('/uploads', express.static('uploads'))
+app.use(express.json());
+app.use(express.urlencoded({extended:true}))
+
+
+app.use("/api", apiRouter);
+app.use("/other", otherRouter)
+
+
+
+
+
+
+
+
+
+
 
 app.get("/practice", (req, res) => {
     request(

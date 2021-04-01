@@ -4,17 +4,17 @@ module.exports = {
   
     entry: './client/index.js',
     output: {
-        path: path.join(__dirname, 'public'),
+        path: path.join(__dirname, 'build'),
         filename: 'bundle.js'
     },
     mode: process.env.NODE_ENV,
     devServer: {
-      publicPath: '/build/',
+      publicPath: '/build',
       compress: true,
       port: 8080,
       proxy: {
-        '/practice': 'http://localhost:5000'
-      },
+        '/api': 'http://localhost:5000'
+        },
     },
     module: {
       rules:[
@@ -33,7 +33,7 @@ module.exports = {
         }
       ]
     },
-    devServer: {
-        contentBase: path.join(__dirname, 'public')
-    }
+    // devServer: {
+    //     contentBase: path.join(__dirname, 'public')
+    // 
 }
