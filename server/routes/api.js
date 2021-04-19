@@ -31,9 +31,15 @@ router.post("/", upload.single('carImage'), async (req,res) => {
     console.log(req.file)
     const car = new Cars({
         model: req.body.model,
-        brand: req.body.brand,
         year: req.body.year,
-        carImage: req.file.path
+        carImage: req.file.path,
+        price: req.body.price,
+        maxRange: req.body.maxRange,
+        maxHorsePower:req.body.maxHorsePower,
+        passengers: req.body.passengers,
+        fullCharge: req.body.fullCharge,
+        zeroToSix:  req.body.zeroToSix,
+        Dimensions: req.body.Dimensions
     });
 
     try {

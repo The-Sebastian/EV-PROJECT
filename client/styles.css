@@ -1,6 +1,6 @@
 body{
-    background-color: red;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(7, 6, 6);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,28 +13,47 @@ body{
 .header {
     max-width: 800px;
     margin: auto;
+    padding-left: 400px;
+    padding-right:400px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
+    border: solid 2px;
+    border-style: solid 2px;
+    margin-bottom: 40px;
+    color: white;
+    background-color: black;
+
+}
+
+.list {
 
 }
 #title {
     font-size: 50px;
     text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-
+    
 .bi-lightning-charge{
  
 }
 
 .model {
     max-width: 1000px;
+    font-size: 40px;
+    padding-left: 200px;
+    padding-right:200px;
     margin: auto;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center; 
+    border: solid 0px;
+    background-color: black;
+    color: white;
 }
 
 .display {
@@ -48,15 +67,35 @@ body{
 #left {
     background-color: black;
     color: white;
-    padding-top: 325px;
-    padding-bottom: 325px;
+    padding-top: 328px;
+    padding-bottom: 328px;
+    font-style:oblique;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #right {
     background-color: black;
     color: white;
-    padding-top: 325px;
-    padding-bottom: 325px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 328px;
+    padding-bottom: 328px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-style:oblique;
+    font-weight: bold;
+}
+#specs {
+    background-color: black;
+    color: white;
+    border: solid 2px;
+    margin-bottom: 0px;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.sp {
+    border: solid 2px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    padding: 20px;
 }
